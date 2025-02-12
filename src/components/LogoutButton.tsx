@@ -9,7 +9,7 @@ export default function LogoutButton() {
   const queryClient = useQueryClient();
 
   const handleLogout = () => {
-    sessionStorage.removeItem("token");
+    localStorage.removeItem("token");
     dispatch(logoutSuccess());
     queryClient.clear();
     navigate("/auth/login");
